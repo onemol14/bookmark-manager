@@ -1,5 +1,4 @@
 import  { useState } from 'react';
-import { getOverlayDirection } from 'react-bootstrap/esm/helpers';
 
 const PopupForm = ({ tileList, setTileList }) => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -47,6 +46,7 @@ const PopupForm = ({ tileList, setTileList }) => {
                     value={websiteName}
                     onChange={handleWebsiteNameChange}
                     required
+                    className="bg-white border-2 border-black"
                   />
                 </label>
               </div> 
@@ -59,10 +59,11 @@ const PopupForm = ({ tileList, setTileList }) => {
                     value={websiteURL}
                     onChange={ (e) => setWebsiteURL(e.target.value) }
                     required
+                    className="bg-white border-2 border-black"
                   />
                 </label>
               </div>
-              <button type="submit">Submit</button>
+              <button type="submit" className="bg-white border-2 border-black rounded-lg">Submit</button>
             </form>
           </div>
         </div>

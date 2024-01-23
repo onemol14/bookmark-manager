@@ -2,13 +2,10 @@ import { useState } from 'react'
 import Tile from './components/Tile'
 import './App.scss';
 import './App.css';
-import Button from 'react-bootstrap/Button';
 import PopupForm from './components/PopupForm';
 
 function App() {
-  const [tileCount, setTileCount] = useState(0);
   const [tileList, setTileList] = useState([]); // array of strings
-
 
   const renderTiles = () => {
     const Tiles = [];
@@ -22,7 +19,7 @@ function App() {
 
   return (
     <>
-        <div style={{ display: 'flex', gap:'10px', flexWrap: 'wrap' }}>
+          <div className="flex gap-2 flex-wrap">
           {renderTiles()}
         </div>
 
